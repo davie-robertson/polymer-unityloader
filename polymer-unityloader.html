@@ -1,0 +1,40 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="polymer-unityloader">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `polymer-unityloader`
+     * Getting a Unity3D generated WebGL project into a Polymer element
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PolymerUnityloader extends Polymer.Element {
+      static get is() { return 'polymer-unityloader'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'polymer-unityloader'
+          },
+          webglcontent: {
+            type: String,
+            value: 'playthis'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PolymerUnityloader.is, PolymerUnityloader);
+  </script>
+</dom-module>
